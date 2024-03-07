@@ -8,8 +8,11 @@ class user_workflow():
 
     def eval_input(input):
         if (input == "1"):
-            user_workflow.dl_menu()
+            #add function for last used settings
+            print ("tbd")
         elif (input == "2"):
+            user_workflow.dl_menu()
+        elif (input == "3"):
             user_workflow.file_menu()
         elif (input == "y"):
             return True
@@ -28,9 +31,9 @@ class user_workflow():
             file_handler.file_setup()
 
         print ("Welcome to Magic: The Gathering Card Details\n") #TODO
-        print ("In case you are unsure what to do, press h for help or read the ReadMe file\n") #TODO
+        print ("In case you are unsure what to do, press h for help or read the ReadMe\n") #TODO
         print ("\n")
-        print ("1: Download latest bulk file\n2: Change file settings\nh: Help Menu\n")
+        print ("1: Download with last used settings\n2: Download latest bulk file\n3: Change file settings\nh: Help Menu\n")
         choice_input = input()
 
         user_workflow.eval_input(choice_input)
@@ -39,12 +42,12 @@ class user_workflow():
         print ("Do you want to download the Default Cards from Scryfall? (y/n): ")
     
         DC_input = input()
-        DC_val = user_workflow.boolval_input(DC_input)
+        DC_val = user_workflow.eval_input(DC_input)
 
         if (DC_val == False):
             print ("Do you want to download All Cards from Scryfall? (y/n): ")
             AC_input = input()
-            AC_val = user_workflow.boolval_input(AC_input)
+            AC_val = user_workflow.eval_input(AC_input)
     
     def help_menu():
         print ("This is the help menu.")
