@@ -4,7 +4,7 @@ def file_setup():
     print ("Please enter the file directory for output files (leave blank to use Downloads directory): ")
     path_input = input()
     if (path_input == ""):
-        print("tbd")
+        filepath = os.getcwd()
     elif (os.path.isdir(path_input) == True):
         filepath = path_input
     else:
