@@ -8,8 +8,7 @@ class user_workflow():
 
     def eval_input(input):
         if (input == "1"):
-            #add function for last used settings
-            print ("tbd")
+            file_handler.file_output()
         elif (input == "2"):
             user_workflow.dl_menu()
         elif (input == "3"):
